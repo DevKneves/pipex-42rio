@@ -6,7 +6,7 @@
 /*   By: kneves <kneves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 03:40:02 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 03:40:02 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/04 11:22:53 by kneves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ int main(int argc, char **argv, char **envp)
     }
     else
     {
-        ft_putstr("invalid arguments\n")
-        ft_putstr("Ex: ./pipex <file1> <cmd1> <cmd2> <file2>\n")
+        ft_putstr("invalid arguments\n");
+        ft_putstr("Ex: ./pipex <file1> <cmd1> <cmd2> <file2>\n");
     }
     return (0);
 }

@@ -6,11 +6,20 @@
 /*   By: kneves <kneves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 03:54:52 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 03:54:52 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/04 11:45:25 by kneves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
+
+void	ft_putstr(char *str)
+{
+	while (str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+}
 
 char	*find_path(char *cmd, char **envp)
 {
@@ -61,8 +70,8 @@ void	execute(char *argv, char **envp)
 		while (cmd[++i])
 			free(cmd[i]);
 		free(cmd);
-		error();
+		conflict();
 	}
 	if (execve(path, cmd, envp) == -1)
-		error();
+		conflict();
 }
