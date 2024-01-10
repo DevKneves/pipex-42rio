@@ -6,7 +6,7 @@
 /*   By: kneves <kneves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 03:54:52 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/04 11:45:25 by kneves           ###   ########.fr       */
+/*   Updated: 2024/01/04 14:12:02 by kneves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_putstr(char *str)
 {
-	while (str)
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		write(1, str, 1);
-		str++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }
 
